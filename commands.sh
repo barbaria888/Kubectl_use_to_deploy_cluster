@@ -8,10 +8,10 @@ alias kgn='kubectl get nodes'
 #-----------------------------------
 # Install K3s on Control Plane
 #-----------------------------------
-curl -sfLk https://get.k3s.io | \
+curl -sfL https://get.k3s.io | \
 INSTALL_K3S_VERSION=v1.31.0+k3s1 \
 K3S_TOKEN=KCNA \
-INSTALL_K3S_EXEC="--kubelet-arg=eviction-hard=imagefs.available<1%,nodefs.available<1%" \
+INSTALL_K3S_EXEC="--disable traefik --kubelet-arg=eviction-hard=imagefs.available<1%,nodefs.available<1%" \
 sh -
 
 # Verify kubectl installation
