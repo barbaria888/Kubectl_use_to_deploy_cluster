@@ -1,3 +1,10 @@
+
+export KUBECONFIG=$HOME/.kube/config
+
+echo 'export KUBECONFIG=$HOME/.kube/config' >> ~/.bashrc
+source ~/.bashrc
+
+
 # allow  non root users to chmod 
 
 # Create kube directory in your home
